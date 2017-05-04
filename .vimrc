@@ -26,10 +26,12 @@ set showmatch
 "plugin installation & management
 call plug#begin('~/.vim/plugged')
 
-"Plug 'vim-ruby/vim-ruby'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
+Plug 'vim-ruby/vim-ruby'
+Plug 'wincent/command-t'
 
 call plug#end()
 
@@ -37,3 +39,7 @@ call plug#end()
 let g:lightline = {
 	\ 'colorscheme': 'seoul256',
 	\ }
+
+"command-t configuration
+set wildignore+=*.log,*.sql,*.cache
+noremap <Leader>r :CommandTFlush<CR>

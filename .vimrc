@@ -3,7 +3,6 @@ syntax on
 colorscheme desert
 set guifont=Monaco\ Regular:h18
 
-set columns=100
 set number
 
 let mapleader=" "

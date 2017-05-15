@@ -1,6 +1,8 @@
+set nocompatible
+
 filetype on
 syntax on
-colorscheme desert
+colorscheme monokai
 set guifont=Monaco\ Regular:h18
 
 set number
@@ -33,6 +35,12 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 "plugin installation & management
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+   \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'

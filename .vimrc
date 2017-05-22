@@ -1,5 +1,7 @@
 set nocompatible
 
+set shiftwidth=2
+
 filetype on
 syntax on
 set guifont=Monaco\ Regular:h18
@@ -78,12 +80,6 @@ let g:lightline = {
 "command-t configuration
 set wildignore+=*.log,*.sql,*.cache
 noremap <Leader>r :CommandTFlush<CR>
-
-"ruby config
-"autocmd FileType rb setlocal shiftwidth=2 tabstop=2
-autocmd FileType rb exec 'setlocal shiftwidth=2 tabstop=2'
-"yaml config
-autocmd FileType yml setlocal shiftwidth=2 tabstop=2
 
 autocmd FileType Dockerfile syntax on
 

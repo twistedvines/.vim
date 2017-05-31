@@ -49,6 +49,11 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 
+"config for Livedown plugin
+nnoremap <Leader>ldp :LivedownPreview<CR>
+nnoremap <Leader>ldk :LivedownKill<CR>
+nnoremap <Leader>ldt :LivedownToggle<CR>
+
 
 "plugin installation & management
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -67,6 +72,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-ruby/vim-ruby'
 Plug 'wincent/command-t'
+Plug 'shime/vim-livedown'
 
 call plug#end()
 

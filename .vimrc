@@ -73,6 +73,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-ruby/vim-ruby'
 Plug 'wincent/command-t'
 Plug 'shime/vim-livedown'
+Plug 'rodjek/vim-puppet'
 
 call plug#end()
 
@@ -96,3 +97,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "maps NERDTree to Leader+e
 map <Leader>e :NERDTreeToggle<CR>
+
+"remove auto hash alignment
+let g:puppet_align_hashes = 0

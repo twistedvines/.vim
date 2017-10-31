@@ -100,3 +100,9 @@ map <Leader>e :NERDTreeToggle<CR>
 
 "remove auto hash alignment
 let g:puppet_align_hashes = 0
+
+"Livedown configuration
+let g:livedown_autorun = 0
+let g:livedown_open = 1
+let g:livedown_port = 1337
+let g:livedown_browser = "Firefox"

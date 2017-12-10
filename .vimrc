@@ -74,6 +74,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'wincent/command-t'
 Plug 'shime/vim-livedown'
 Plug 'rodjek/vim-puppet'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 

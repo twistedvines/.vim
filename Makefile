@@ -11,3 +11,10 @@ test: build_docker_image
 clean:
 	rm -rf $(PWD)/plugged/*
 	rm -rf $(PWD)/autoload/*
+install:
+	mkdir -p "${HOME}/.vim"
+	cp ./.vimrc "${HOME}/.vim/.vimrc"
+	rm "${HOME}/.vimrc" && ln -s "${HOME}/.vim/.vimrc" "${HOME}/.vimrc"
+	cp -r ./autoload "${HOME}/.vim/autoload"
+	cp -r ./colors "${HOME}/.vim/colors"
+	cp -r ./plugged "${HOME}/.vim/plugged"

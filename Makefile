@@ -1,4 +1,4 @@
-.PHONY: build_docker_image test
+.PHONY: build_docker_image test clean
 
 PWD=$(shell pwd)
 

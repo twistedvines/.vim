@@ -13,11 +13,14 @@ clean:
 	rm -rf $(PWD)/autoload/*
 install:
 	mkdir "${HOME}/.vim"
-	cp ./.vimrc "${HOME}/.vim/.vimrc"
-	ln -s "${HOME}/.vim/.vimrc" "${HOME}/.vimrc"
+	make install_vimrc
 	cp -r ./autoload "${HOME}/.vim/autoload"
 	cp -r ./colors "${HOME}/.vim/colors"
 	cp -r ./plugged "${HOME}/.vim/plugged"
+install_vimrc:
+	cp -r ./.vimrc "${HOME}/.vim/.vimrc"
+	rm "${HOME}/.vimrc"
+	ln -s "${HOME}/.vim/.vimrc" "${HOME}/.vimrc"
 uninstall:
 	rm -rf "${HOME}/.vim"
 	rm -f "${HOME}/.vimrc"

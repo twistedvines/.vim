@@ -49,6 +49,9 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 
+"tabbing keybinds
+nnoremap <Leader>te :tabe<CR>
+
 "config for Livedown plugin
 nnoremap <Leader>ldp :LivedownPreview<CR>
 nnoremap <Leader>ldk :LivedownKill<CR>
@@ -112,3 +115,4 @@ let g:livedown_browser = "Firefox"
 "vimux keymappings
 map <Leader>vp :VimuxPromptCommand<CR>
 map <Leader>vl :VimuxRunLastCommand<CR>
+map <Leader>vz :VimuxZoomRunner<CR>

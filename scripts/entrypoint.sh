@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
-ln -s /home/vim/.vim/.vimrc /home/vim/.vimrc
-vim +PlugInstall +qall
+cd /usr/local/src/.vim && make install
+vim $@

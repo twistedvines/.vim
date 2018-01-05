@@ -5,7 +5,7 @@ PWD=$(shell pwd)
 build_docker_image:
 	docker build -t "vim:latest" .
 test: build_docker_image
-	docker run -it -v "$(PWD):/home/vim/.vim" vim:latest
+	docker run -it -v "$(PWD):/usr/local/src/.vim" vim:latest
 	clear
 	make clean
 clean:
@@ -19,7 +19,7 @@ install:
 	cp -r ./plugged "${HOME}/.vim/plugged"
 install_vimrc:
 	cp -r ./.vimrc "${HOME}/.vim/.vimrc"
-	rm "${HOME}/.vimrc"
+	rm "${HOME}/.vimrc" || :
 	ln -s "${HOME}/.vim/.vimrc" "${HOME}/.vimrc"
 uninstall:
 	rm -rf "${HOME}/.vim"

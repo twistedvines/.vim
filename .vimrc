@@ -75,6 +75,7 @@ Plug 'wincent/command-t'
 Plug 'shime/vim-livedown'
 Plug 'rodjek/vim-puppet'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'benmills/vimux'
 
 call plug#end()
 
@@ -107,3 +108,6 @@ let g:livedown_autorun = 0
 let g:livedown_open = 1
 let g:livedown_port = 1337
 let g:livedown_browser = "Firefox"
+
+"vimux keymappings
+map <Leader>vp :VimuxPromptCommand<CR>

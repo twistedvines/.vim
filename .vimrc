@@ -111,3 +111,4 @@ let g:livedown_browser = "Firefox"
 
 "vimux keymappings
 map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>

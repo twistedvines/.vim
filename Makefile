@@ -20,4 +20,4 @@ install:
 	cp -r ./plugged "${HOME}/.vim/plugged"
 uninstall:
 	rm -rf "${HOME}/.vim"
-	rm -f "{HOME}/.vimrc"
+	rm -f "${HOME}/.vimrc"
